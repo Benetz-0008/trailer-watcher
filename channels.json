@@ -1,5 +1,26 @@
 [
   { "name": "Marvel Entertainment", "channelId": "UCvC4D8onUfXzvjTOM-dBfEA" },
   { "name": "PlayStation", "channelId": "UCsBjURrPoezykLs9EqgamOA" },
-  { "name": "Netflix", "channelId": "UCWOA1ZGywLbqmigxE4Qlvuw" }
+  { "name": "Netflix", "channelId": "UCWOA1ZGywLbqmigxE4Qlvuw" },
+  { "name": "Focus Features", "channelId": "UCU4SM3j_9TNWaSu8KdGV50g" }
+  { "name": "A24", "channelId": "UCuPivVjnfNo4mb3Oog_frZg" },
+  { "name": "Waner Bros", "channelId": "UCjmJDM5pRKbUlVIzDYYWb6g" },
+  { "name": "Sony Pictures", "channelId": "UCz97F7dMxBNOfGYu3rx8aCw" },
+  { "name": "20th Century Studios", "channelId": "UC2-BeLxzUBSs0uSrmzWhJuQ" },
+  { "name": "Amazon MGM Studio", "channelId": "UCf5CjDJvsFvtVIhkfmKAwAA" },
+  { "name": "Paramount", "channelId": "UCF9imwPMSGz4Vq1NiTWCC7g" },
+  { "name": "Lionsgate", "channelId": "UCJ6nMHaJPZvsJ-HmUmj1SeA" },
+  { "name": "Disney", "channelId": "UC_5niPa-d35gg88HaS7RrIw" },
+  { "name": "NEON", "channelId": "UCpy5dRhZd-JbZP4NsrnLt1w" },
+  { "name": "MD Pictures", "channelId": "UCQExjzw5-z1VE2Fcbd3ky9Q" },
+  { "name": "Prime Video", "channelId": "UCQJWtTnAHhEG5w4uN0udnUQ" },
+  { "name": "Ubisoft", "channelId": "UC0KU8F9jJqSLS11LRXvFWmg" },
+  { "name": "XBOX", "channelId": "UCjBp_7RuDBUYbd1LegWEJ8g" },
+  { "name": "EA SPorts FC", "channelId": "UCoyaxd5LQSuP4ChkxK0pnZQ" },
+  { "name": "Nintendo America", "channelId": "UCWOA1ZGywLbqmigxE4Qlvuw" },
+  { "name": "XXI", "channelId": "UCudik2UCrl1TGyyPZ2I9Pvg" },
+  { "name": "CGV", "channelId": "UC2vfMMUMoAZd-RBGwA0-9Nw" },
+  { "name": "Vidio", "channelId": "UCdmIbbRekb8q05LV9ZejzsA" },
+  { "name": "Disney PLus", "channelId": "UCIrgJInjLS2BhlHOMDW7v0g" },
+  { "name": "HBO Max", "channelId": "UCx-KWLTKlB83hDI6UKECtJQ" }
 ]
