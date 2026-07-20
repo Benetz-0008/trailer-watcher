@@ -61,13 +61,23 @@ function decodeHtml(str) {
 
 async function fetchChannelEntries(channelId) {
   const url = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+      Accept: 'application/xml,text/xml,*/*',
+    },
+  });
   if (!res.ok) {
     console.error(`Gagal fetch channel ${channelId}: HTTP ${res.status}`);
     return [];
   }
   const xml = await res.text();
-  return parseEntries(xml);
+  const entries = parseEntries(xml);
+  if (entries.length === 0) {
+    console.log(`[debug] ${channelId} — 0 entry ke-parse. Cuplikan respons: ${xml.slice(0, 200)}`);
+  }
+  return entries;
 }
 
 async function sendToDiscord(entry, channelName) {
@@ -90,7 +100,9 @@ async function sendToDiscord(entry, channelName) {
   });
   if (!res.ok) {
     console.error(`Gagal kirim ke Discord: HTTP ${res.status}`);
+    return false; // gagal, jangan ditandain seen
   }
+  return true;
 }
 
 async function main() {
@@ -111,9 +123,11 @@ async function main() {
       if (!matchesKeyword(entry.title)) continue;
 
       console.log(`Baru: [${channel.name}] ${entry.title}`);
-      await sendToDiscord(entry, channel.name);
-      seen[entry.videoId] = Date.now();
-      newCount++;
+      const ok = await sendToDiscord(entry, channel.name);
+      if (ok) {
+        seen[entry.videoId] = Date.now();
+        newCount++;
+      }
     }
   }
 
